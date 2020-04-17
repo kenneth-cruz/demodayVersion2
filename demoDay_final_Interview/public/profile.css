@@ -1,0 +1,13 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  background-color: beige;
+  background-image: url(leaves_background.jpg);
+  background-size: cover;
+}
+img{
+  height: 200px;
+}
+h1{
+  color: blue;
+}

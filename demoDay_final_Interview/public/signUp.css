@@ -1,0 +1,26 @@
+body{
+  padding-top: 100px;
+  word-wrap:break-word;
+  background-image: url(mountain_cloud_background.jpg);
+  background-position: center;
+  background-size: 100%;
+}
+img{
+  height: 150px;
+}
+
+p{
+  font-weight: bold;
+  color: orange;
+  font-size: 18px;
+}
+a{
+  color: beige;
+}
+
+h1, label{
+  color: maroon;
+}
+label{
+  font-size: 18px;  
+}

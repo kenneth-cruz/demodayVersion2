@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<!-- links to all the files main css, bootstrap etc -->
+<head>
+  <title>WorldNewsFlash</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="main2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="page-header text-center">
+      <h1><span> </span> WorldNewsFlash <br> <i class="fas fa-book"></i> Knowledge.Exchange Page <i class="fas fa-book"></i> </h1>
+
+      <!-- logout link -->
+      <a href="/logout" class="button primary">Logout</a>
+      <a href="/" class="button primary" >Home</a>
+    </div>
+
+<section class = "mainContainerMessageBoard">
+
+        <h2>See all Your Favorited Topics:</h2>
+        <ul>
+        <% for(var i=0; i<topics.length; i++) {%>
+          <% if (user._id == topics[i].posterId.toString()) { %>
+            <li id="topicChoices">
+              <h3><%= topics[i].topic %></h3> <br>
+              <a target="_blank" id="urlDisplayLink" href=<%= topics[i].link %>> <%= topics[i].link %> </a>  <br>
+              <span><i class="fa fa-heart" aria-hidden="true"></i></span> <br>
+              <a href="/post/<%= topics[i]._id%>">
+                <%# this is the source to display that image %>
+                <img src="<%= topics[i].imageSRC%>" width="50%" height="50%">
+              </a>
+            </li>
+            <br> <br> <br>
+          <% } %>
+          <% } %>
+
+        </ul>
+</section>
+
+
+    <script src="https://kit.fontawesome.com/077191d827.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

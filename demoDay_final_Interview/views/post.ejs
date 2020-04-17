@@ -1,0 +1,22 @@
+<%- include('header'); -%>
+  <ul>
+    <%# Question: why is there a for loop here if the page is only showing 1 image. %>
+
+  <% for(var i=0; i<topics.length; i++) {%>
+    <li>
+      <img src="<%= topics[i].imageSRC%>"> <br>
+      <span><%= topics[i].topic %></span> <br>
+      <span><%= topics[i].link %></span> <br>
+      <span id = "matchMaker"> Person You Matched With: <%= topics[i].email %></span> <br>
+      <span> <%= topics[i].keyword %></span> <br>
+
+      <span><i class="fa fa-heart" aria-hidden="true"></i></span> <br>
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+    </li>
+    <% } %>
+  </ul>
+
+  <a href="/profile">Return to Swiping</a>
+  <a href="/messageBoard">Return to messageBoard</a>
+
+<%- include('footer'); -%>
